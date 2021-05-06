@@ -12,7 +12,7 @@ $(document).ready(function () {
         <div>Latitud : ${datos[id].lat}</div> <div>Longitud : ${datos[id].lng}</div>`
       );
       $.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${datos[id].lat}&lon=${datos[id].lng}&lang=sp&units=metric&appid=41ae359ed166c475a385d646a32e668c`,
+        `https://api.openweathermap.org/data/2.5/weather?lat=${datos[id].lat}&lon=${datos[id].lng}&lang=sp&units=metric&appid=${clima_app}`,
         function (dato) {
           $.get(
             `https://openweathermap.org/img/wn/${dato.weather[0].icon}@4x.png`,
